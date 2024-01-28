@@ -91,27 +91,27 @@ export default class Ui {
     let container = `
     <form>
     <div class="row align-items-center justify-content-center g-0 ">
-      <div class="col-md-6  pe-3 parent">
+      <div class="col-md-6 p-0 pe-md-3 parent">
         <input placeholder="Enter Your Name" type="text" class="form-control bg-dark p-2 text-white" id="contactName">
         <p class="validationMSG"></p>
       </div>
-      <div class="col-md-6 ps-3 parent">
+      <div class="col-md-6 p-0 ps-md-3 parent">
         <input placeholder="Enter Your Email" type="email" class="form-control bg-dark p-2 text-white" id="contactMail">
         <p class="validationMSG"></p>
       </div>
-      <div class="col-md-6 pe-3 parent">
+      <div class="col-md-6 p-0 pe-md-3 parent">
         <input placeholder="Enter Your Phone" type="tel" class="form-control bg-dark p-2 text-white" id="contactPhone">
         <p class="validationMSG"></p>
       </div>
-      <div class="col-md-6 ps-3 parent">
+      <div class="col-md-6 p-0 ps-md-3 parent">
         <input placeholder="Enter Your Age" type="number" class="form-control bg-dark p-2 text-white" id="contactAge">
         <p class="validationMSG"></p>
       </div>
-      <div class="col-md-6 pe-3 parent">
+      <div class="col-md-6 p-0 pe-md-3 parent">
         <input placeholder="Enter Your Password" type="password" class="form-control bg-dark p-2 text-white" id="contactPassword">
         <p class="validationMSG"></p>
       </div>
-      <div class="col-md-6 ps-3 parent">
+      <div class="col-md-6 p-0 ps-md-3 parent">
         <input placeholder="Repassword" type="password" class="form-control bg-dark p-2 text-white" id="contactRepassword">
         <p class="validationMSG"></p>
       </div>
