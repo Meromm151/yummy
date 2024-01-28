@@ -85,6 +85,7 @@ a{
   cursor: pointer;
 }
 /* viewport */
+#viewport{margin-left: 65px;}
 .viewport-container {
   width: calc(100% - 65px);
   

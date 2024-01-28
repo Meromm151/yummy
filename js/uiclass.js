@@ -1,6 +1,6 @@
 export default class Ui {
   constructor() {
-    this.sidebarBtn=$(".open-btn")
+    this.sidebarBtn = $(".open-btn");
     this.sideBar = $(".side-bar");
     this.viewPort = $("#viewport .view-port .row");
     this.loadingScreen = $(".loading");
@@ -10,15 +10,16 @@ export default class Ui {
     let json = await api;
     let container = "";
     json.forEach((element) => {
-      let item = ` <div class="col-md-3">
+      let item = ` <div class="col-md-4">
             <div class="item m-3 rounded-4 overflow-hidden" mealId="${element.idMeal}">
-              <img src="${element.strMealThumb}" alt="">
+              <img src="../image/placeholder.png" alt="" class="lazy-loaded-image lazy" data-src="${element.strMealThumb}" >
               <div class="item-after the-meal t-100">${element.strMeal}</div>
             </div>
             <div mealIdPage="${element.idMeal}"></div>
           </div>`;
       container += item;
     });
+
     return container;
   }
   // building Categories Container function initial
@@ -68,8 +69,8 @@ export default class Ui {
   }
   async buildingIngredientsContainer(api) {
     let json = await api;
-    console.log(json)
-    json = json.meals.slice(0,19)
+    console.log(json);
+    json = json.meals.slice(0, 19);
     let container = "";
     json.forEach((element) => {
       let item = `
@@ -86,9 +87,8 @@ export default class Ui {
     });
     return container;
   }
-  buildFormContainer(){
-    let container =
-    `
+  buildFormContainer() {
+    let container = `
     <form>
     <div class="row align-items-center justify-content-center g-0 ">
       <div class="col-md-6  pe-3 parent">
@@ -120,8 +120,8 @@ export default class Ui {
       </div>
     </div>
   </form>
-    `
-    return container
+    `;
+    return container;
   }
   // building Meal Page Container function initial
   buildingMealPageContainer(meal) {

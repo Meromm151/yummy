@@ -216,9 +216,33 @@ function inputSearchEvent() {
 async function sequence(api) {
   let response = await api;
   await ui.viewPort.html(response);
+
+// remove loading screen
   $(".loading").fadeOut(1000, () => {
     $(".loading").addClass("d-none");
   });
+
+  //lazy loading images
+  var lazyImages = [].slice.call(
+    document.querySelectorAll(".lazy-loaded-image.lazy")
+  );
+  let lazyImageObserver = new IntersectionObserver(function (
+    entries,
+    observer
+  ) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        let lazyImage = entry.target;
+        lazyImage.src = lazyImage.dataset.src;
+        lazyImage.classList.remove("lazy");
+        lazyImageObserver.unobserve(lazyImage);
+      }
+    });
+  });
+  lazyImages.forEach(function (lazyImage) {
+    lazyImageObserver.observe(lazyImage);
+  });
+  //meal item on click event listener
   $(".the-meal").on("click", async (e) => {
     let json = await mealApi.lookupFullMealDetailsById(
       $(e.target).parents("[mealId]").attr("mealId")
