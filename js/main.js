@@ -153,7 +153,7 @@ $(".hidden-bar ul li").on("click", (e) => {
                 form.repassword.valid.value = false;
                 $(form.repassword.selector)
                   .siblings("p")
-                  .html(form.repassword["valid"]["trueMSG"])
+                  .html(form.repassword["valid"]["falseMSG"])
                   .css({ color: "red", fontSize: "12" });
               }
             } else {
