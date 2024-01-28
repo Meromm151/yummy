@@ -10,7 +10,7 @@ export default class Ui {
     let json = await api;
     let container = "";
     json.forEach((element) => {
-      let item = ` <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+      let item = ` <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="item m-3 rounded-4 overflow-hidden" mealId="${element.idMeal}">
               <img src="../image/placeholder.png" alt="" class="lazy-loaded-image lazy" data-src="${element.strMealThumb}" >
               <div class="item-after the-meal t-100">${element.strMeal}</div>
@@ -28,7 +28,7 @@ export default class Ui {
     let container = "";
     json.forEach((element) => {
       let item = `
-    <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
       <div class="item m-3 rounded-4 overflow-hidden" catName="${
         element.strCategory
       }">
@@ -55,7 +55,7 @@ export default class Ui {
     let container = "";
     json.forEach((element) => {
       let item = `
-      <div class="col-md-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="item country m-3 rounded-4 overflow-hidden text-center"">
           <div class="layer d-flex" areaName="${element.strArea}"></div>
           <div class="country"><i class="fa-solid fa-earth-americas fs-70"></i></div>
@@ -74,7 +74,7 @@ export default class Ui {
     let container = "";
     json.forEach((element) => {
       let item = `
-      <div class="col-md-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="item country m-3 rounded-4 overflow-hidden text-center"">
           <div class="layer d-flex" ingredientName="${element.strIngredient}"></div>
           <div class="country"><i class="fa-solid fa-drumstick-bite fs-70"></i></i></div>
