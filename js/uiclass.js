@@ -10,7 +10,7 @@ export default class Ui {
     let json = await api;
     let container = "";
     json.forEach((element) => {
-      let item = ` <div class="col-md-4">
+      let item = ` <div class="col-12 col-sm-4 col-md-4 col-lg-3">
             <div class="item m-3 rounded-4 overflow-hidden" mealId="${element.idMeal}">
               <img src="../image/placeholder.png" alt="" class="lazy-loaded-image lazy" data-src="${element.strMealThumb}" >
               <div class="item-after the-meal t-100">${element.strMeal}</div>
@@ -28,7 +28,7 @@ export default class Ui {
     let container = "";
     json.forEach((element) => {
       let item = `
-    <div class="col-md-3">
+    <div class="col-12 col-sm-4 col-md-4 col-lg-3">
       <div class="item m-3 rounded-4 overflow-hidden" catName="${
         element.strCategory
       }">
@@ -37,10 +37,10 @@ export default class Ui {
           <h3>
             ${element.strCategory}
           </h3>
-          <p class="fs-6 fw-normal">${element.strCategoryDescription.slice(
+          <p class="fs-6 fw-normal catigory-desc">${element.strCategoryDescription.slice(
             0,
             100
-          )}....</p>
+          )}</p>
         </div>
       </div>
     </div>

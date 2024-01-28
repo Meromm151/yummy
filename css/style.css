@@ -20,7 +20,7 @@ a{
   color: white;
 }
 .t-100{
-  top: 100%;
+  top: 200%;
 }
 .form-control::placeholder {
   color: white;
@@ -121,6 +121,7 @@ a{
 }
 .item-after-cat{
   justify-content: center;
+  text-overflow: ellipsis;
 }
 .item:hover .item-after{
   top: 0;
@@ -186,10 +187,14 @@ a{
   z-index: 9999999999999;
   
 }
-
+.catigory-desc{
+  margin: 0;
+  height: 80%;
+}
 .ingredient{
   width: 100%;
-  height: 50px;
+  height: 70px;
+  margin: 0;
   text-overflow: ellipsis;
 }
 .validationMSG{
